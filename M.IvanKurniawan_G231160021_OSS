@@ -1,0 +1,65 @@
+Berikut hasil laporan kopdar FreeBSD pada tanggal 12 Mei 2018 
+di gedung Pusat Informasi Kota Semarang dengan pembicara Andy Hidayat :
+
+1. Oprating System FreeBSD :   
+> A Unix-Like OS Based Kernel 4.4BSD-Lite  
+> Open Source and Free (bersifat opensource dan bebas untuk di kembangkan)
+> Familly with OpenBSD, NetBSD & DragonFlyBSD (berikut turunan dari FreeBSD)
+> BSD License (Untuk mengembangkan tidak perlu adanya permision/ijin dari pihak lisensi)
+> Low Resource and Stable (OS yg stabil di bandikan OS dari lainnya dan sudah terbukti)
+> More than 30.000 Free Applications (banyak aplikasi yg bisa di jalankan di freeBSD entah itu dari aplikasi linux maupun yg lain)
+> Secure By Default (Keamanan yg lebih baik)
+> The Power to Serve (pelayanan yg maksimal)
+
+2. Instalasi di VirtualBox :
+ a. Aplikasi yg harus di siapkan :
+    > Virtualbox or VMWare Player  
+    > Putty or WinSCP (Windows Users) 
+    > Terminal or SCP (Linux Users)
+ b. Step by step instalasi :
+    1. FreeBSD First Booting tekan “Enter”
+    2. Pilih "Install" tekan "Enter"
+    3. Keyboard map for the VM, tekan “Enter”
+    4. Masukan "HOSTNAME" tekan “Enter”
+    5. Tekan "sepasi" pada "lib32" lalu tekan “Enter”
+    6. Pilih partisi "UFS"(default) tekan “Enter”
+    7. Entrie Disk tekan “Enter”
+    8. Pilih BSD Labels tekan “Enter”
+    9. Pilih Commit tekan “Enter”
+   10. Proses ekstact "Base, Kernel & Lib32"
+   11. Masukkan password baru pada root
+   12. Network Interface Card for the VM tekan “Enter”
+   13. IPv4  tekan “Enter”
+   14. Konfigurasi DHCP pilih "No" tekan “Enter”
+   15. Catat IP address yg kita dapat lalu tekan “Enter”
+   16. Konfigurasi IPv6 pilih "No" tekan “Enter”
+   17. Catat Domain Name dan IP addres yg kita dapat
+   18. Konfigurasi Date Time
+   19. Pilih "sshd" dan "dumpdev"
+   20. Pilih disable "SendMail Service"
+   21. UserName untuk login ke server tekan “Enter”
+   22. Untuk masuk root pada FreeBSD adalah "wheel"(berbeda dengan Linux)
+   23. Apply Configuration tekan “Enter”
+   24. "No" Modification tekan “Enter”
+   25. Reboot The Server tekan “Enter”
+
+3. Portsnap & Disfiles :
+   1. Login FreeBSD Box
+   2. lakukan printah "ifconfig" catat IP address nya
+   3. Buka WinSCP , pilih SCP , masukkan IP di hostname , masukkan username dan password
+   4. Klik "login"
+   5. Upload file yg di butuhkan di server seperti : portsnap, distfiles & pkg
+   6. Buka aplikasi PuTTY masukkan username@ipaddress dan ssh port 
+   7. Login roor dan buka directory /usr/home/username , dan lakukan perintah "ls -lh" akan tampil file yg kita barusan upload.
+   8. Extract "Portsnap" dengan perintah : 
+        - tar -zxvf portsnap11.1_SysAdmin01.tar.gz -C /var/db/
+        - portsnap extract
+   9. Extract "Distfiles" dengan perintah : 
+        - tar -zxvf distfiles11.1_SysAdmin01.tar.gz -C /usr/ports/
+        - portsnap distfiles
+
+4. Penginstalan Apache, MariaDB & PHP
+5. CMS Server dengan Wordpress, Drupal8 & Joomla3
+
+
+        
